@@ -14,4 +14,4 @@ class ProblemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Problem
-        fields = ["description", "photo", "user", "photo_url"]
+        fields = ["description", "photo", "user", "photo_url", "id"]

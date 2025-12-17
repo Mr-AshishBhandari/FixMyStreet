@@ -32,6 +32,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
 
 # Application definition
 
@@ -45,6 +51,7 @@ INSTALLED_APPS = [
     "cloudinary_storage",
     "cloudinary",
     "rest_framework",
+    "djoser",
     "core",
 ]
 
@@ -138,3 +145,8 @@ cloudinary.config(
     api_key=os.getenv("API_KEY"),
     api_secret=os.getenv("API_SECRET"),
 )
+
+
+SIMPLE_JWT = {
+    "AUTH_HEADER_TYPES": ("JWT",),
+}

@@ -5,8 +5,10 @@ from rest_framework import routers
 
 from . import views
 
-router = routers.DefaultRouter()
-
-router.register(r"user", views.UserViewSet, basename="user")
-router.register(r"problems", views.ProblemViewSet, basename="problem")
-urlpatterns = router.urls
+urlpatterns = [
+    path("user/", views.UserViewSet.as_view(), name="user"),
+    path("problem/", views.ProblemViewSet.as_view(), name="problem"),
+    path(
+        "problem/<int:pk>", views.ProblemDetailViewSet.as_view(), name="detail_problem"
+    ),
+]
