@@ -12,7 +12,7 @@ def root_url(request):
                 "login": "auth/jwt/create",
                 "profile": "auth/users/me",
                 "problem": "api/problem/",
-                "problem detail": "api/problem/<id>",
+                "problem detail": "api/problem/id",
             },
         }
     )

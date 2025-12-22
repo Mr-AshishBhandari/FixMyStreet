@@ -21,10 +21,11 @@ from django.urls import path, include
 from rest_framework import routers
 
 from core import views
+from . import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", views.root_urls()),
+    path("", views.root_url),
     path("api/", include("core.urls")),
     path("auth/", include("djoser.urls")),
     path("auth/", include("djoser.urls.jwt")),
