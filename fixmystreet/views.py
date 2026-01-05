@@ -8,8 +8,9 @@ def root_url(request):
         {
             "message": "API is running",
             "endpoints": {
-                "register": "/api/users/",
+                "register": "/api/register/",
                 "login": "auth/jwt/create",
+                "user": "api/user",
                 "profile": "auth/users/me",
                 "problem": "api/problem/",
                 "problem detail": "api/problem/id",
